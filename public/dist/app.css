@@ -1,0 +1,277 @@
+.container-cart {
+  background-color: #ad6932;
+  min-height: 100vh;
+  padding: 8px;
+}
+.container-cart .content {
+  min-height: 50vh;
+}
+.overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+.overlay .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: 16px 'Mouse Memoirs';
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.header {
+  color: #F1D5A5;
+  text-align: center;
+  width: 100%;
+  height: 25vh;
+  background-image: repeating-linear-gradient(45deg, #5f391c, #5f391c 100px, #865127 100px, #865127 200px);
+}
+.header__title {
+  font-size: 40px;
+}
+.header__content {
+  font-size: 20px;
+}
+.footer {
+  height: 25vh;
+}
+.footer__text {
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+}
+.footer__text h2 {
+  line-height: 80px;
+}
+.footer__get {
+  background-color: #a0ce5a;
+}
+.footer__get:hover {
+  background-color: #86ad4a;
+}
+.footer__return {
+  background-color: #ad6932;
+}
+.footer__return:hover {
+  background-color: #6e4423;
+}
+.list-product {
+  margin: 8px 0;
+}
+.list-product .owl-stage-outer .owl-stage .owl-item:nth-child(even) .card {
+  background-color: #E8B0AF;
+}
+.list-product .owl-stage-outer .owl-stage .owl-item:nth-child(odd) .card {
+  background-color: #F1D5A5;
+}
+.list-product .item {
+  height: 320px;
+  cursor: pointer;
+}
+.list-product .item .card {
+  position: relative;
+}
+.list-product .item .card__thumbail .image-cart {
+  background: none;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.list-product .item .card__quantity {
+  position: absolute;
+  background: white;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-weight: 700;
+  font-size: 20px;
+  top: 10%;
+  right: 5%;
+}
+.list-product .item .card__info {
+  background: rgba(255, 255, 255, 0.65);
+  color: #523118;
+  height: 80px;
+}
+.list-product .item .card__info .cart__info__name {
+  font-size: 32px;
+}
+.list-product .item .card__info .cart__info__price {
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+.list-product .item .card .cart__interact {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  transform: perspective(600px) rotateX(90deg);
+  opacity: 0;
+  transition: 0.4s all ease-in-out;
+}
+.owl-item:hover .card .cart__interact {
+  transform: perspective(600px) rotateX(0deg) !important;
+  opacity: 1 !important;
+}
+.total {
+  width: 100%;
+  background: #F1D5A5;
+  height: 300px;
+}
+.total__item {
+  width: 15%;
+}
+.total__item h4,
+.total__item span {
+  font-size: 20px;
+}
+.total__all h4,
+.total__all span {
+  font-size: 40px;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Mouse Memoirs';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/mousememoirs/v8/t5tmIRoSNJ-PH0WNNgDYxdSb3T7Pqg.ttf) format('truetype');
+}
+

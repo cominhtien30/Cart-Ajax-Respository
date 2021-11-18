@@ -1,0 +1,78 @@
+.list-product{
+    margin: 8px 0;
+    //styles item even and odd
+    .owl-stage-outer{
+        .owl-stage{
+            .owl-item:nth-child(even){
+                .card{
+                  background-color:@color-background4 ;
+                }
+            }
+            .owl-item:nth-child(odd){
+                .card{
+                    background-color: @color-background1;
+                  }
+            }
+        }
+    }
+    .item{
+        height: 320px;
+        cursor: pointer;
+        .card{
+            position: relative;
+            &__thumbail{
+                .image-cart{
+                    background: none;
+                    height: 240px;
+                    object-fit: cover;
+                }
+            }
+            &__quantity{
+                position: absolute;
+                background: white;
+                text-align: center;
+                line-height: 60px;
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+                font-weight: 700;
+                font-size: @size-l;
+                top: 10%;
+                right: 5%;
+            }
+            &__info{
+                background: rgba(255, 255, 255, 0.65);
+                color: @color-secondary;
+                height: 80px;
+                .cart__info__name{
+                    font-size: @size-big;
+                }
+                .cart__info__price{
+                    font-size: @size-l;
+                    letter-spacing: 4px;
+                }
+            }
+            .cart__interact{
+                position: absolute;
+                top: 60%;
+                width: 100%;
+                transform: perspective(600px) rotateX(90deg);
+                opacity: 0;
+                transition: 0.4s all ease-in-out;
+
+            }
+        }
+    }
+}
+.owl-item{
+    &:hover{
+        .card{
+            .cart__interact{
+                transform: perspective(600px) rotateX(0deg) !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+}
+
+
